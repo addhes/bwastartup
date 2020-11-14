@@ -31,6 +31,8 @@ func main() {
 	//Membuat route post users
 	api.POST("/users", userHandler.RegisterUser)
 	api.POST("/sessions", userHandler.Login)
+	api.POST("/email_checkers", userHandler.CheckEmailKetersedian)
+	// api.GET("/users/fetch", authMiddleware(authService, userService), userHandler.FetchUser)
 	// menjalankan route
 	router.Run()
 
