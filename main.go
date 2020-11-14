@@ -30,18 +30,8 @@ func main() {
 
 	//Membuat route post users
 	api.POST("/users", userHandler.RegisterUser)
+	api.POST("/sessions", userHandler.Login)
 	// menjalankan route
 	router.Run()
-
-	// fmt.Println("Connetion to database success")
-
-	// var users []user.User //variable users adalah struct dari User(user/entity.go/User)
-	// db.Find(&users)       // mencari variable users
-
-	// for _, user := range users {
-	// 	fmt.Println(user.Name)
-	// 	fmt.Println(user.Email)
-	// 	fmt.Println("=======")
-	// }
 
 }
